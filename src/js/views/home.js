@@ -12,17 +12,22 @@ export const Home = () => {
 
 	}, [])
 	return (
-		<div className="text-center mt-2 d-flex justify-content-center">
-			{store.contacts.map((item) => (
-				<Card 
-				key={item.id}
-				id={item.id}
-				name={item.name}
-				phone={item.phone}
-				email={item.email}
-				address={item.address}
-				/>
-			))}
+		<div className="container">
+			<div className="text-center mt-2 row ">
+				{store.contacts.map((item) => (
+					<div className="col-12">
+					<Card
+						key={item.id}
+						id={item.id}
+						name={item.name}
+						phone={item.phone}
+						email={item.email}
+						address={item.address}
+
+					/>
+					</div>
+				))}
+			</div>
 		</div>
 	)
 };
